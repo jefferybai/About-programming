@@ -5,8 +5,9 @@
 - [js中的堆内存栈内存](#js中的堆内存栈内存)
 - [js异步机制](#js异步机制)
 - [http协议](#http协议)
-- [http headers](#http headers)
-- [http Cache-Control](#http Cache-Control)
+- [http headers](#headers)
+- [http Cache-Control](#Cache-Control)
+- [meta标签总结](#meta标签总结)
 - [http中get与post的区别](#http中get与post的区别)
 
 ## 编译与解释有什么区别 
@@ -200,11 +201,11 @@ TCP/IP协议族是由一个四层协议组成的系统，这四层分别为：�
 
 参考文章： http://mp.weixin.qq.com/s/27zpNIGhVbx-on9FDs_6dw
 
-## http headers
+## headers
 
 https://www.cnblogs.com/benbenfishfish/p/5821091.html
 
-## http Cache-Control
+## Cache-Control
 
  public    ---- 数据内容皆被储存起来，就连有密码保护的网页也储存，安全性很低
  
@@ -224,6 +225,10 @@ https://www.cnblogs.com/benbenfishfish/p/5821091.html
  s-maxage  ---- 与max-age的唯一区别是,s-maxage仅仅应用于共享缓存.而不应用于用户代理的本地缓存等针对单用户的缓存. 另外,s-maxage的优先级要高于max-age.
 
  no-transform   ---- 告知代理,不要更改媒体类型,比如jpg,被你改成png.
+ 
+ ## meta标签总结
+ 
+ https://www.cnblogs.com/heyiming/p/6229395.html
 
 
 ## http中get与post的区别
