@@ -5,6 +5,8 @@
 - [js中的堆内存栈内存](#js中的堆内存栈内存)
 - [js异步机制](#js异步机制)
 - [http协议](#http协议)
+- [http headers](#http headers)
+- [http Cache-Control](#http Cache-Control)
 - [http中get与post的区别](#http中get与post的区别)
 
 ## 编译与解释有什么区别 
@@ -197,6 +199,32 @@ TCP/IP协议族是由一个四层协议组成的系统，这四层分别为：�
 第四次挥手： 客户端-发回ACK报文确认，并将确认序号设置为收到序号加1
 
 参考文章： http://mp.weixin.qq.com/s/27zpNIGhVbx-on9FDs_6dw
+
+## http headers
+
+https://www.cnblogs.com/benbenfishfish/p/5821091.html
+
+## http Cache-Control
+
+ public    ---- 数据内容皆被储存起来，就连有密码保护的网页也储存，安全性很低
+ 
+ private    ---- 数据内容只能被储存到私有的cache，仅对某个用户有效，不能共享
+ 
+ no-cache    ---- 可以缓存，但是只有在跟WEB服务器验证了其有效后，才能返回给客户端(如果没过期200(from cache) 如果过期了if-match对比eTag, 或者Last-Modified，如果相等304
+
+ no-store  ---- 请求和响应都禁止被缓存
+ 
+ max-age：   ----- 本响应包含的对象的过期时间
+ Must-revalidate    ---- 如果缓存过期了，会再次和原来的服务器确定是否为最新数据，而不是和中间的proxy
+
+ max-stale  ----  允许读取过期时间必须小于max-stale 值的缓存对象。 
+
+ proxy-revalidate  ---- 与Must-revalidate类似，区别在于：proxy-revalidate要排除掉用户代理的缓存的。即其规则并不应用于用户代理的本地缓存上。
+
+ s-maxage  ---- 与max-age的唯一区别是,s-maxage仅仅应用于共享缓存.而不应用于用户代理的本地缓存等针对单用户的缓存. 另外,s-maxage的优先级要高于max-age.
+
+ no-transform   ---- 告知代理,不要更改媒体类型,比如jpg,被你改成png.
+
 
 ## http中get与post的区别
 
