@@ -5,6 +5,7 @@
 - [js中的堆内存栈内存](#js中的堆内存栈内存)
 - [js内存开辟和释放](#js内存开辟和释放)
 - [js异步机制](#js异步机制)
+- [js微任务宏任务](#js微任务宏任务)
 - [http协议](#http协议)
 - [http headers](#headers)
 - [http Cache-Control](#Cache-Control)
@@ -154,6 +155,13 @@ close();
 所以，我们可以看出，JS的异步请求，借助了而它所在的运行环境浏览器来处理并且返回结果。
 
 而且，这也解释了为什么那些回调函数的this指向window，因为这些异步的代码都是在全局上下文环境下执行的。
+
+## js微任务宏任务
+macrotask 和 microtask 表示异步任务的两种分类。
+
+在挂起任务时，JS 引擎会将所有任务按照类别分到这两个队列中，首先在 macrotask 的队列（这个队列也被叫做 task queue）中取出第一个任务，执行完毕后取出 microtask 队列中的所有任务顺序执行；之后再取 macrotask 任务，周而复始，直至两个队列的任务都取完。
+![avatar](https://user-gold-cdn.xitu.io/2018/11/23/16740fa4cd9c6937?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
 
 ## http协议
 
