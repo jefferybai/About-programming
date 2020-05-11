@@ -299,6 +299,16 @@ HTTP给汽车运输设定了好几个服务类别，有GET, POST, PUT, DELETE等
 ## link标签
 当解析htm文件时候遇到link标签，浏览器会新开一个线程去加载link标签，不会影响主线程的执行
 
+## script标签
+script标签为同步执行标签，script标签里面的代码，或者src指向的文件都是在主线程里面同步执行，所以script标签会阻塞主线程。
+
+但是script标签有两个异步执行属性：
+
+async: 代码异步下载，下载完成立刻执行。
+
+defer： 代码异步下载，下载完成后等待DOMContentLoaded事件，而后依次执行script标签里面的代码。
+
+
 
 
 
