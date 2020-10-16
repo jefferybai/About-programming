@@ -17,6 +17,8 @@
 - [script标签](#script标签)
 - [提升首屏加载速度](#提升首屏加载速度)
 - [web同源](#web同源)
+- [BFC](#BFC)
+
 
 
 ## 编译与解释有什么区别 
@@ -327,5 +329,22 @@ defer： 代码异步下载，下载完成后等待DOMContentLoaded事件，而�
 
 ## web同源
 同源是指请求的资源或者接口在同一个域名，端口，和协议下
+
+## BFC
+BFC指的是块格式化上下文
+
+BFC产生的条件
+
+1.浮动的元素 
+2.display为table-cell,flex,inline-block
+3.position为absolute,fixed
+4.overflow不为visible
+
+BFC布局规则
+1.内部元素的margin会被折叠
+2.不被浮动的元素遮盖
+3.内部元素浮动也会计算高度
+4.内部元素垂直排列
+5.内部元素不会影响，外部布局
 
 
