@@ -335,16 +335,16 @@ BFC指的是块格式化上下文
 
 BFC产生的条件
 
-1.浮动的元素 
-2.display为table-cell,flex,inline-block
-3.position为absolute,fixed
-4.overflow不为visible
+1. 浮动的元素 
+2. display为table-cell,flex,inline-block
+3. position为absolute,fixed
+4. overflow不为visible
 
 BFC布局规则
-1.内部元素的margin会被折叠
-2.不被浮动的元素遮盖
-3.内部元素浮动也会计算高度
-4.内部元素垂直排列
-5.内部元素不会影响，外部布局
+1. 内部元素的margin会被折叠
+2. 不被浮动的元素遮盖
+3. 内部元素浮动也会计算高度
+4. 内部元素垂直排列
+5. 内部元素不会影响，外部布局
 
 
